@@ -122,7 +122,7 @@ Click on the *Transformations* tab and enter the following code in the *Code* fi
 ----
 // Kafka payload (record value JSON deserialized to JavaScript object)
 var payload = JSON.parse(record.value);
-payload['sensor_0'] = Math.round(payload.sensor_0 * 1000);
+payload['sensor_ts'] = Math.round(payload.sensor_ts * 1000);
 JSON.stringify(payload);
 ----
 +
